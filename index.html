@@ -290,6 +290,7 @@ a:hover{color:var(--blue-500);}
   .contact__grid{gap:32px;}
 }
 </style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -873,7 +874,8 @@ a:hover{color:var(--blue-500);}
           <div class="form-group"><label class="form-label">Message</label>
             <textarea class="form-textarea" id="f-msg" name="message" placeholder="Briefly describe your symptoms or reason for getting in touch…"></textarea>
           </div>
-          <button class="btn btn--primary" style="width:100%;justify-content:center;" onclick="submitEnquiry(event)">Send Enquiry</button>
+          <div data-netlify-recaptcha="true"></div>
+            <button class="btn btn--primary" style="width:100%;justify-content:center;" onclick="submitEnquiry(event)">Send Enquiry</button>
           </form>
           <p style="font-size:0.78rem;color:var(--grey-400);margin-top:12px;line-height:1.6;">For urgent medical concerns please call 03 375 4949 or your GP. This form does not replace a formal referral.</p>
         </div>
@@ -967,6 +969,19 @@ a:hover{color:var(--blue-500);}
     const form = e.currentTarget.closest('form');
     const submitButton = e.currentTarget;
 
+      const recaptchaToken = (typeof grecaptcha !== 'undefined') ? grecaptcha.getResponse() : '';
+      if (!recaptchaToken) {
+            let status = form.querySelector('[data-form-status]');
+            if (!status) {
+                    status = document.createElement('p');
+                    status.setAttribute('data-form-status', '');
+                    status.style.cssText = 'font-size:0.875rem;color:#a33;margin-top:12px;line-height:1.6;';
+                    form.appendChild(status);
+            }
+            status.textContent = 'Please confirm you are not a robot before submitting.';
+            return;
+      }
+
     submitButton.disabled = true;
 
     try {
@@ -978,7 +993,8 @@ a:hover{color:var(--blue-500);}
           '&lastName=' + encodeURIComponent(last) +
           '&email=' + encodeURIComponent(email) +
           '&phone=' + encodeURIComponent(phone) +
-          '&message=' + encodeURIComponent(msg)
+          '&message=' + encodeURIComponent(msg) +
+            '&g-recaptcha-response=' + encodeURIComponent(recaptchaToken)
       });
 
       if (!response.ok) throw new Error('Form submission failed');
