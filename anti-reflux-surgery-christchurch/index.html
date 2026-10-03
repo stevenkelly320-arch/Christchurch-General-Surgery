@@ -36,9 +36,8 @@ window.CGS_ADS_ID='AW-7681049665';
 window.CGS_ADS_CONVERSION_LABEL='76OHCMGIzs4cEKjw5ptE';
 if(window.CGS_ADS_ID){gtag('config',window.CGS_ADS_ID,{allow_enhanced_conversions:true});}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -138,7 +137,7 @@ if(window.CGS_ADS_ID){gtag('config',window.CGS_ADS_ID,{allow_enhanced_conversion
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Primary">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Christchurch General Surgery home"><img src="/images/cgs-logo.png" alt="Christchurch General Surgery" width="820" height="360"></a>
+    <a class="brand" href="/" aria-label="Christchurch General Surgery home"><img src="/images/cgs-logo-300.webp" alt="Christchurch General Surgery" width="300" height="132"></a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     <ul id="nav-links">
       <li><a href="/gallbladder-surgery-christchurch/">Gallbladder</a></li>
@@ -209,7 +208,7 @@ if(window.CGS_ADS_ID){gtag('config',window.CGS_ADS_ID,{allow_enhanced_conversion
   <div class="wrap">
     <span class="mono">Who you will see</span>
     <h2>Your surgeons at Christchurch General Surgery</h2>
-    <div class="who-grid"><div class="who-card"><img src="/images/dr-richard-flint-surgeon-christchurch.jpg" alt="Dr Richard Flint, Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery" width="532" height="466" loading="lazy"><div><b>Dr Richard Flint</b><span>Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery</span></div></div><div class="who-card"><img src="/images/dr-steven-kelly-surgeon-christchurch.jpg" alt="Dr Steven Kelly, Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery" width="900" height="900" loading="lazy"><div><b>Dr Steven Kelly</b><span>Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery</span></div></div></div>
+    <div class="who-grid"><div class="who-card"><img src="/images/dr-richard-flint-surgeon-christchurch-532.webp" srcset="/images/dr-richard-flint-surgeon-christchurch-160.webp 160w, /images/dr-richard-flint-surgeon-christchurch-340.webp 340w, /images/dr-richard-flint-surgeon-christchurch-532.webp 532w" sizes="76px" alt="Dr Richard Flint, Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery" width="532" height="466" loading="lazy"><div><a href="/dr-richard-flint/"><b>Dr Richard Flint</b></a><span>Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery</span></div></div><div class="who-card"><img src="/images/dr-steven-kelly-surgeon-christchurch-600.webp" srcset="/images/dr-steven-kelly-surgeon-christchurch-160.webp 160w, /images/dr-steven-kelly-surgeon-christchurch-340.webp 340w, /images/dr-steven-kelly-surgeon-christchurch-600.webp 600w, /images/dr-steven-kelly-surgeon-christchurch-900.webp 900w" sizes="76px" alt="Dr Steven Kelly, Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery" width="900" height="900" loading="lazy"><div><a href="/dr-steven-kelly/"><b>Dr Steven Kelly</b></a><span>Upper GI, General and Bariatric Surgeon · consultation, endoscopy and surgery</span></div></div></div>
   </div>
 </section>
 <section class="faq-simple" id="faq">
@@ -239,10 +238,10 @@ if(window.CGS_ADS_ID){gtag('config',window.CGS_ADS_ID,{allow_enhanced_conversion
       <h2>Request an appointment.</h2>
       <p class="lede" style="margin-top:18px">All three surgeons consult from 146 Leinster Road, Merivale. Send a request or call the rooms during business hours. No GP referral is required.</p>
       <div class="cinfo">
-        <div><h4>Phone</h4><p><a href="tel:+6433754949">03 375 4949</a></p><small>One number for all surgeons</small></div>
-        <div><h4>Email</h4><p><a href="mailto:info@cgsurgery.co.nz">info@cgsurgery.co.nz</a></p><small>Healthlink EDI: cwlssurg</small></div>
-        <div><h4>Rooms</h4><p>146 Leinster Road<br>Merivale, Christchurch 8014</p><small>Parking at the rear</small></div>
-        <div><h4>Hours</h4><p>Monday to Thursday, 8:00am to 5:00pm<br>Friday, 8:00am to 1:00pm</p><small>Closed weekends</small></div>
+        <div><span class="lbl">Phone</span><p><a href="tel:+6433754949">03 375 4949</a></p><small>One number for all surgeons</small></div>
+        <div><span class="lbl">Email</span><p><a href="mailto:info@cgsurgery.co.nz">info@cgsurgery.co.nz</a></p><small>Healthlink EDI: cwlssurg</small></div>
+        <div><span class="lbl">Rooms</span><p>146 Leinster Road<br>Merivale, Christchurch 8014</p><small>Parking at the rear</small></div>
+        <div><span class="lbl">Hours</span><p>Monday to Thursday, 8:00am to 5:00pm<br>Friday, 8:00am to 1:00pm</p><small>Closed weekends</small></div>
       </div>
     </div>
     <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
@@ -271,10 +270,10 @@ if(window.CGS_ADS_ID){gtag('config',window.CGS_ADS_ID,{allow_enhanced_conversion
 <footer>
   <div class="wrap">
     <div class="fgrid">
-      <div><img src="/images/cgs-logo.png" alt="Christchurch General Surgery" width="820" height="360" loading="lazy"><p style="font-size:.93rem;max-width:34ch">Dr Richard Flint, Dr Steven Kelly and Dr Grant Coulter. Upper GI, general and bariatric surgery and endoscopy at 146 Leinster Road, Merivale, Christchurch.</p></div>
-      <div><h5>Services</h5><ul><li><a href="/gallbladder-surgery-christchurch/">Gallbladder surgery</a></li><li><a href="/hernia-surgery-christchurch/">Hernia surgery</a></li><li><a href="/anti-reflux-surgery-christchurch/">Anti-reflux surgery</a></li><li><a href="/endoscopy-christchurch/">Gastroscopy and colonoscopy</a></li><li><a href="https://cwls.co.nz" rel="noopener">Bariatric surgery</a></li></ul></div>
-      <div><h5>Surgeons</h5><ul><li><a href="https://richardflintsurgery.co.nz" rel="noopener">Dr Richard Flint</a></li><li><a href="https://doctorstevenkelly.com" rel="noopener">Dr Steven Kelly</a></li><li><a href="/#surgeons">Dr Grant Coulter</a></li><li><a href="https://cwls.co.nz" rel="noopener">Christchurch Weight Loss Surgery</a></li></ul></div>
-      <div><h5>Contact</h5><ul><li>146 Leinster Road, Merivale, Christchurch 8014</li><li><a href="tel:+6433754949">03 375 4949</a></li><li><a href="mailto:info@cgsurgery.co.nz">info@cgsurgery.co.nz</a></li><li>Healthlink EDI cwlssurg</li><li>Mon to Thu 8am to 5pm, Fri 8am to 1pm</li></ul></div>
+      <div><img src="/images/cgs-logo-300.webp" alt="Christchurch General Surgery" width="300" height="132" loading="lazy"><p style="font-size:.93rem;max-width:34ch">Dr Richard Flint, Dr Steven Kelly and Dr Grant Coulter. Upper GI, general and bariatric surgery and endoscopy at 146 Leinster Road, Merivale, Christchurch.</p></div>
+      <div><span class="fh">Services</span><ul><li><a href="/gallbladder-surgery-christchurch/">Gallbladder surgery</a></li><li><a href="/hernia-surgery-christchurch/">Hernia surgery</a></li><li><a href="/anti-reflux-surgery-christchurch/">Anti-reflux surgery</a></li><li><a href="/endoscopy-christchurch/">Gastroscopy and colonoscopy</a></li><li><a href="https://cwls.co.nz" rel="noopener">Bariatric surgery</a></li></ul></div>
+      <div><span class="fh">Surgeons</span><ul><li><a href="/dr-richard-flint/">Dr Richard Flint</a></li><li><a href="/dr-steven-kelly/">Dr Steven Kelly</a></li><li><a href="/dr-grant-coulter/">Dr Grant Coulter</a></li><li><a href="https://cwls.co.nz" rel="noopener">Christchurch Weight Loss Surgery</a></li></ul></div>
+      <div><span class="fh">Contact</span><ul><li>146 Leinster Road, Merivale, Christchurch 8014</li><li><a href="tel:+6433754949">03 375 4949</a></li><li><a href="mailto:info@cgsurgery.co.nz">info@cgsurgery.co.nz</a></li><li>Healthlink EDI cwlssurg</li><li>Mon to Thu 8am to 5pm, Fri 8am to 1pm</li></ul></div>
     </div>
     <div class="fbot"><span>&copy; 2026 Christchurch General Surgery</span><span>Information on this site is general and does not replace a consultation with your surgeon.</span></div>
   </div>
